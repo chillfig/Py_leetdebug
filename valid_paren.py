@@ -19,7 +19,7 @@ class Solution:
         for char in s:
 
             # If the character is a closing bracket
-            if char in mapping:
+            if char in mapping.keys():
 
                 # Pop the topmost element from the stack, if it is non empty
                 # Otherwise assign a dummy value of '#' to the top_element variable
