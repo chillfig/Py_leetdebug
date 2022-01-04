@@ -19,11 +19,12 @@ class Solution:
         for index, num in enumerate(nums):
             # identify the complement needed to satisfy target
             complement = target - num
-            # if we've seen the complement with a past iteration, return
-            if complement in hashmap:
-                return [index, hashmap[complement]]
+            # if the current num is a complement of a past iteration, return
+            if num in hashmap:
+                return [hashmap[num], index]
             # otherwise, store the index of this num with the current complement as key
+            hashmap[complement] = index
         return []
 
 
-example1 = Solution([3,2,4], 6)
+example1 = Solution([1,2,4], 3)
