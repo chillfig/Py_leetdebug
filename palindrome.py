@@ -10,7 +10,7 @@ class Solution:
     def print_attempt(self):
         print(self.answer)
 
-    # fill this in
+    # 9: Palindrome Number
     def isPalindrome(self, x: int) -> bool:
         num = str(x)
         reverse = len(num) - 1
@@ -22,6 +22,6 @@ class Solution:
             reverse = reverse - 1
         return True
 
-example1 = Solution(2332)
+example1 = Solution(121)
 example2 = Solution(-121)
 example3 = Solution(10)
